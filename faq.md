@@ -1,3 +1,8 @@
+---
+description: Common questions and troubleshooting.
+icon: circle-question
+---
+
 # FAQ
 
 **Is Relay real?**

@@ -1,18 +1,29 @@
+---
+description: Send your first notification in about five minutes.
+icon: bolt
+---
+
 # Quickstart
 
 Get up and running with Relay in a few minutes.
 
-## 1. Create an account
+{% stepper %}
+{% step %}
+## Create an account
 
 Sign up at `https://relay.example.com/signup` and create a project. Each project gets its own API key.
+{% endstep %}
 
-## 2. Install the SDK
+{% step %}
+## Install the SDK
 
 ```bash
 npm install @relay/sdk
 ```
+{% endstep %}
 
-## 3. Send a notification
+{% step %}
+## Send a notification
 
 ```javascript
 import { Relay } from "@relay/sdk";
@@ -26,8 +37,10 @@ await relay.notifications.send({
   data: { firstName: "Jane" },
 });
 ```
+{% endstep %}
 
-## 4. Check delivery status
+{% step %}
+## Check delivery status
 
 ```bash
 curl https://api.relay.example.com/v1/notifications/ntf_9f8a7b/status \
@@ -42,5 +55,7 @@ curl https://api.relay.example.com/v1/notifications/ntf_9f8a7b/status \
   "delivered_at": "2026-06-30T18:22:10Z"
 }
 ```
+{% endstep %}
+{% endstepper %}
 
 Next: set up [authentication](authentication.md) properly for production, or explore the full [API reference](api-reference.md).

@@ -1,3 +1,8 @@
+---
+description: API keys and request signing.
+icon: key
+---
+
 # Authentication
 
 Relay uses API keys to authenticate requests.
@@ -33,4 +38,6 @@ Relay verifies the signature and rejects requests older than 5 minutes to preven
 
 Old keys stay valid for 24 hours after you generate a new one, so you can roll deploys without downtime.
 
-⚠️ Never expose `rl_live_` keys in client-side code. Use test keys for local development.
+{% hint style="danger" %}
+Never expose `rl_live_` keys in client-side code. Use test keys for local development.
+{% endhint %}

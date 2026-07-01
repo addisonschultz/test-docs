@@ -1,3 +1,8 @@
+---
+description: Endpoints, params, and responses.
+icon: brackets-curly
+---
+
 # API Reference
 
 Base URL: `https://api.relay.example.com/v1`
@@ -53,3 +58,7 @@ Returns a paginated list of notifications for the project.
   }
 }
 ```
+
+{% hint style="warning" %}
+Requests are capped at **100 req/min per key**. Exceeding it returns a `429` with a `Retry-After` header.
+{% endhint %}

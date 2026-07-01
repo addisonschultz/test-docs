@@ -1,3 +1,8 @@
+---
+description: Subscribe to delivery events instead of polling.
+icon: webhook
+---
+
 # Webhooks
 
 Subscribe to delivery events instead of polling the status endpoint.
@@ -36,4 +41,6 @@ const isValid = relay.webhooks.verify(payload, signature, signingSecret);
 
 ## Retries
 
+{% hint style="info" %}
 If your endpoint doesn't return a `2xx` response, Relay retries with exponential backoff: 1m, 5m, 30m, 2h, then gives up after 4 attempts.
+{% endhint %}
